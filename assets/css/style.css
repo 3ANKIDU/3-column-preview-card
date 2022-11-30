@@ -1,0 +1,125 @@
+/* importing the font */
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca:wght@400&display=swap');
+/* resting everything */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* variables */
+
+:root{
+    --bright--orange: hsl(31, 77%, 52%);
+    --dark--cyan: hsl(184, 100%, 22%);
+    --very--dark--cyan: hsl(179, 100%, 13%);
+}
+
+/* typography */
+
+h2, p, .button{
+    color: white;
+}
+
+h2{
+    font-family: 'Big Shoulders Display', cursive;
+    margin: 1em 0;
+}
+
+p{
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    margin-bottom: 4em;
+    font-size: 15px;
+    opacity: 70%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.button{
+    color: var(--bright--orange);
+    background-color: white;
+    padding: .5rem 1rem;
+    border-radius: 5em;
+    font-size: .75rem;
+    align-self: flex-start;
+    text-transform: capitalize;
+}
+
+.button:hover{
+    background-color: transparent;
+    padding: .4rem .9rem;
+    border: .1rem solid white;
+    color: white;
+}
+
+/* layout */
+
+#cards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+    min-height: 100vh;
+}
+
+.container{
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.card{
+    max-width: 20em;
+}
+
+.icon{
+    width: 3em;
+}
+
+.orangeBack{
+    background-color: var(--bright--orange);
+    border-radius: .3em .3em 0 0;
+}
+
+.cyanBack{
+    background-color: var(--dark--cyan);
+}
+
+.darkCyanBack{
+    background-color: var(--very--dark--cyan);
+    border-radius: 0 0 .3em .3em;
+}
+
+/* media queries */
+
+@media only screen and (min-width: 39em){
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    #cards{
+        flex-direction: row;
+    }
+
+    .card{
+        height: 100%;
+    }
+
+    .orangeBack{
+        border-radius: .3em 0 0 .3em;
+    }
+
+    .darkCyanBack{
+        border-radius: 0 .3em .3em 0;
+    }
+
+}
